@@ -348,10 +348,10 @@ export default class Tween extends PIXI.utils.EventEmitter {
      *
      * @fires PIXI.tween.Tween#stop
      *
-     * @param {boolean} [end=false] - Force end to be called
+     * @param {boolean} [end=true] - Force end to be called, default to true to ensure cleanup of Promises created for the tween (if any)
      * @returns {PIXI.tween.Tween} - This tween instance
      */
-    stop(end = false) {
+    stop(end = true) {
         this._active = false;
         this.emit('stop');
 
