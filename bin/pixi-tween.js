@@ -1052,14 +1052,14 @@ var Tween = function (_PIXI$utils$EventEmit) {
          *
          * @fires PIXI.tween.Tween#stop
          *
-         * @param {boolean} [end=false] - Force end to be called
+         * @param {boolean} [end=true] - Force end to be called, default to true to ensure cleanup of Promises
          * @returns {PIXI.tween.Tween} - This tween instance
          */
 
     }, {
         key: 'stop',
         value: function stop() {
-            var end = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : false;
+            var end = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : true;
 
             this._active = false;
             this.emit('stop');
