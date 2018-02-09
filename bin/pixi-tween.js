@@ -1052,7 +1052,7 @@ var Tween = function (_PIXI$utils$EventEmit) {
          *
          * @fires PIXI.tween.Tween#stop
          *
-         * @param {boolean} [end=true] - Force end to be called, default to true to ensure cleanup of Promises
+         * @param {boolean} [end=true] - Force end to be called, default to true to ensure cleanup of Promises created for the tween (if any)
          * @returns {PIXI.tween.Tween} - This tween instance
          */
 
